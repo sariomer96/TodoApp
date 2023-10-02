@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174157EB2ACAE45A00EDC560 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174157EA2ACAE45A00EDC560 /* ToDoCell.swift */; };
+		174157ED2ACAE6B800EDC560 /* Todoo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 174157EC2ACAE6B800EDC560 /* Todoo.sqlite */; };
+		174157F02ACAE73300EDC560 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174157EF2ACAE73300EDC560 /* ToDo.swift */; };
+		174157F42ACAE8AD00EDC560 /* ToDoDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174157F32ACAE8AD00EDC560 /* ToDoDaoRepository.swift */; };
+		174157F72ACAE95600EDC560 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 174157F62ACAE95600EDC560 /* RxSwift */; };
 		179EE5532ACACD0500C73951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179EE5522ACACD0500C73951 /* AppDelegate.swift */; };
 		179EE5552ACACD0500C73951 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179EE5542ACACD0500C73951 /* SceneDelegate.swift */; };
-		179EE5572ACACD0500C73951 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179EE5562ACACD0500C73951 /* Anasayfa.swift */; };
+		179EE5572ACACD0500C73951 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179EE5562ACACD0500C73951 /* Home.swift */; };
 		179EE55A2ACACD0500C73951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179EE5582ACACD0500C73951 /* Main.storyboard */; };
 		179EE55C2ACACD0A00C73951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179EE55B2ACACD0A00C73951 /* Assets.xcassets */; };
 		179EE55F2ACACD0A00C73951 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179EE55D2ACACD0A00C73951 /* LaunchScreen.storyboard */; };
@@ -18,14 +23,19 @@
 		179EE5742ACACE8D00C73951 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EE56B2ACACE8B00C73951 /* FMDatabaseQueue.m */; };
 		179EE5752ACACE8D00C73951 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EE56E2ACACE8C00C73951 /* FMDatabaseAdditions.m */; };
 		179EE5762ACACE8D00C73951 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EE5712ACACE8D00C73951 /* FMResultSet.m */; };
-		179EE5782ACACEC700C73951 /* Todoo.db in Resources */ = {isa = PBXBuildFile; fileRef = 179EE5772ACACEC700C73951 /* Todoo.db */; };
+		179EE57A2ACAD0C500C73951 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179EE5792ACAD0C500C73951 /* RegisterViewController.swift */; };
+		179EE57C2ACAD0DC00C73951 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179EE57B2ACAD0DC00C73951 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		174157EA2ACAE45A00EDC560 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		174157EC2ACAE6B800EDC560 /* Todoo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Todoo.sqlite; sourceTree = "<group>"; };
+		174157EF2ACAE73300EDC560 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		174157F32ACAE8AD00EDC560 /* ToDoDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDaoRepository.swift; sourceTree = "<group>"; };
 		179EE54F2ACACD0500C73951 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179EE5522ACACD0500C73951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		179EE5542ACACD0500C73951 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		179EE5562ACACD0500C73951 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
+		179EE5562ACACD0500C73951 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		179EE5592ACACD0500C73951 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		179EE55B2ACACD0A00C73951 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		179EE55E2ACACD0A00C73951 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,7 +52,8 @@
 		179EE56F2ACACE8C00C73951 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		179EE5702ACACE8C00C73951 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		179EE5712ACACE8D00C73951 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		179EE5772ACACEC700C73951 /* Todoo.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Todoo.db; sourceTree = "<group>"; };
+		179EE5792ACAD0C500C73951 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		179EE57B2ACAD0DC00C73951 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +61,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				174157F72ACAE95600EDC560 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174157EE2ACAE6D800EDC560 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				174157EF2ACAE73300EDC560 /* ToDo.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		174157F12ACAE87A00EDC560 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				174157F22ACAE88D00EDC560 /* repo */,
+				174157EE2ACAE6D800EDC560 /* entity */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		174157F22ACAE88D00EDC560 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				174157F32ACAE8AD00EDC560 /* ToDoDaoRepository.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
 		179EE5462ACACD0500C73951 = {
 			isa = PBXGroup;
 			children = (
@@ -75,9 +112,13 @@
 		179EE5512ACACD0500C73951 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				174157F12ACAE87A00EDC560 /* data */,
 				179EE5522ACACD0500C73951 /* AppDelegate.swift */,
 				179EE5542ACACD0500C73951 /* SceneDelegate.swift */,
-				179EE5562ACACD0500C73951 /* Anasayfa.swift */,
+				174157EA2ACAE45A00EDC560 /* ToDoCell.swift */,
+				179EE5562ACACD0500C73951 /* Home.swift */,
+				179EE5792ACAD0C500C73951 /* RegisterViewController.swift */,
+				179EE57B2ACAD0DC00C73951 /* DetailsViewController.swift */,
 				179EE5582ACACD0500C73951 /* Main.storyboard */,
 				179EE55B2ACACD0A00C73951 /* Assets.xcassets */,
 				179EE55D2ACACD0A00C73951 /* LaunchScreen.storyboard */,
@@ -94,7 +135,7 @@
 				179EE56F2ACACE8C00C73951 /* FMResultSet.h */,
 				179EE5712ACACE8D00C73951 /* FMResultSet.m */,
 				179EE5662ACACE8800C73951 /* TodoApp-Bridging-Header.h */,
-				179EE5772ACACEC700C73951 /* Todoo.db */,
+				174157EC2ACAE6B800EDC560 /* Todoo.sqlite */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -115,6 +156,9 @@
 			dependencies = (
 			);
 			name = TodoApp;
+			packageProductDependencies = (
+				174157F62ACAE95600EDC560 /* RxSwift */,
+			);
 			productName = TodoApp;
 			productReference = 179EE54F2ACACD0500C73951 /* TodoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +188,9 @@
 				Base,
 			);
 			mainGroup = 179EE5462ACACD0500C73951;
+			packageReferences = (
+				174157F52ACAE95600EDC560 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 179EE5502ACACD0500C73951 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,7 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				179EE55F2ACACD0A00C73951 /* LaunchScreen.storyboard in Resources */,
-				179EE5782ACACEC700C73951 /* Todoo.db in Resources */,
+				174157ED2ACAE6B800EDC560 /* Todoo.sqlite in Resources */,
 				179EE55C2ACACD0A00C73951 /* Assets.xcassets in Resources */,
 				179EE55A2ACACD0500C73951 /* Main.storyboard in Resources */,
 			);
@@ -172,14 +219,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				179EE5572ACACD0500C73951 /* Anasayfa.swift in Sources */,
+				179EE57A2ACAD0C500C73951 /* RegisterViewController.swift in Sources */,
+				179EE5572ACACD0500C73951 /* Home.swift in Sources */,
 				179EE5722ACACE8D00C73951 /* FMDatabasePool.m in Sources */,
+				174157F02ACAE73300EDC560 /* ToDo.swift in Sources */,
 				179EE5532ACACD0500C73951 /* AppDelegate.swift in Sources */,
+				174157EB2ACAE45A00EDC560 /* ToDoCell.swift in Sources */,
 				179EE5732ACACE8D00C73951 /* FMDatabase.m in Sources */,
 				179EE5552ACACD0500C73951 /* SceneDelegate.swift in Sources */,
+				174157F42ACAE8AD00EDC560 /* ToDoDaoRepository.swift in Sources */,
 				179EE5752ACACE8D00C73951 /* FMDatabaseAdditions.m in Sources */,
 				179EE5762ACACE8D00C73951 /* FMResultSet.m in Sources */,
 				179EE5742ACACE8D00C73951 /* FMDatabaseQueue.m in Sources */,
+				179EE57C2ACAD0DC00C73951 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		174157F52ACAE95600EDC560 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		174157F62ACAE95600EDC560 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 174157F52ACAE95600EDC560 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 179EE5472ACACD0500C73951 /* Project object */;
 }

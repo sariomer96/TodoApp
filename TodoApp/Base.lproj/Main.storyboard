@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Anasayfa-->
+        <!--To Do-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="Anasayfa" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Home" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,23 +22,67 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5n5-kH-x1B">
+                                <rect key="frame" x="0.0" y="92" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hd5-Ah-P2b"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WeF-em-ven">
+                                <rect key="frame" x="0.0" y="148" width="414" height="665"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" id="dat-Xu-nRl" customClass="ToDoCell" customModule="TodoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dat-Xu-nRl" id="UQC-kJ-I8L">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKY-mD-MWv">
+                                                    <rect key="frame" x="20" y="11" width="107" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BKY-mD-MWv" firstAttribute="leading" secondItem="UQC-kJ-I8L" secondAttribute="leadingMargin" id="Bdm-GI-kmD"/>
+                                                <constraint firstItem="BKY-mD-MWv" firstAttribute="top" secondItem="UQC-kJ-I8L" secondAttribute="topMargin" id="rAw-j5-BeT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WeF-em-ven" secondAttribute="bottom" id="421-2v-oDi"/>
+                            <constraint firstItem="WeF-em-ven" firstAttribute="top" secondItem="5n5-kH-x1B" secondAttribute="bottom" id="DWd-Ef-fZ1"/>
+                            <constraint firstItem="5n5-kH-x1B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HrS-n7-3GW"/>
                             <constraint firstItem="4xw-Ka-hAb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hWV-ux-mtm"/>
+                            <constraint firstItem="WeF-em-ven" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jpP-Ev-P7V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5n5-kH-x1B" secondAttribute="trailing" id="vmD-Qo-qlQ"/>
                             <constraint firstItem="4xw-Ka-hAb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yba-Wh-xX0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WeF-em-ven" secondAttribute="trailing" id="yr0-qm-iDh"/>
+                            <constraint firstItem="5n5-kH-x1B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z1m-UL-Ukr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vk7-tz-khZ"/>
-                    <connections>
-                        <segue destination="oXi-Lf-HzX" kind="show" id="Qtz-de-Osf"/>
-                        <segue destination="QaB-p0-Q3E" kind="show" id="9dS-2W-KeV"/>
-                    </connections>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="To Do" id="vk7-tz-khZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ihk-BN-IRd">
+                            <connections>
+                                <segue destination="QaB-p0-Q3E" kind="show" id="XmD-9V-Iut"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983.96946564885491" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="982.60869565217399" y="-2.6785714285714284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UXq-G9-a0e">
@@ -94,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JS-E3-xsf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="680"/>
+            <point key="canvasLocation" x="983" y="816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ccw-RW-4uR">

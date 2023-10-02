@@ -9,4 +9,10 @@ import Foundation
 
 class RegisterViewModel {
     
+    var repo = ToDoDaoRepository()
+    func kaydet(name:String){
+
+        repo.save(name: name)
+   
+    }
 }

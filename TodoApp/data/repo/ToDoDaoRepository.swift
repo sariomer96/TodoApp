@@ -84,4 +84,45 @@ class ToDoDaoRepository {
         db?.close()
     }
     
+    func loadToDo(){
+    
+        db?.open()
+        var list = [ToDo]()
+        do{
+            let rs = try db!.executeQuery("SELECT * FROM AppToDo ", values: nil)
+            
+            while rs.next() {
+                let id = Int(rs.string(forColumn: "id"))!
+                let name = rs.string(forColumn: "name")!
+            
+               
+                
+                let todo = ToDo(id: id, name: name)
+                list.append(todo)
+            }
+            toDoList.onNext(list)
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
+    }
+    
+    
+    
+    func dbCopy(){
+            let bundlePath = Bundle.main.path(forResource: "Todoo", ofType: ".sqlite")
+            let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            let copyPath = URL(fileURLWithPath: targetPath).appendingPathComponent("Todoo.sqlite")
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: copyPath.path){
+                print("The database is already exist")
+            }else{
+                do{
+                    try fileManager.copyItem(atPath: bundlePath!, toPath: copyPath.path)
+                }catch{
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    
 }

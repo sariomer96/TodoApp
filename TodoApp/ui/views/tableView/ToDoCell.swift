@@ -9,6 +9,7 @@ import UIKit
 
 class ToDoCell: UITableViewCell {
 
+    @IBOutlet weak var labelTodoName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
       

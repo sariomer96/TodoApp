@@ -9,13 +9,18 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+   
+    @IBOutlet weak var tfTodoName: UITextField!
+    var todo:ToDo?
+    var viewModel = DetailViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+ 
     }
     
 
-
+    @IBAction func updateClick(_ sender: Any) {
+    }
+    
 
 }

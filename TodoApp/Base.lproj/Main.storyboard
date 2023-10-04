@@ -52,6 +52,9 @@
                                                 <constraint firstItem="BKY-mD-MWv" firstAttribute="top" secondItem="UQC-kJ-I8L" secondAttribute="topMargin" id="rAw-j5-BeT"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelTodoName" destination="BKY-mD-MWv" id="QIz-tC-Ga5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -79,12 +82,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="5n5-kH-x1B" id="43d-aY-RMt"/>
+                        <outlet property="todoTableView" destination="WeF-em-ven" id="Vah-Wg-vAO"/>
+                        <segue destination="oXi-Lf-HzX" kind="show" identifier="toDetail" id="Psy-8d-rTU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="982.60869565217399" y="-2.6785714285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--To Do Save-->
         <scene sceneID="UXq-G9-a0e">
             <objects>
                 <viewController id="QaB-p0-Q3E" sceneMemberID="viewController">
@@ -98,24 +106,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Do Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qAW-EV-L0F">
+                                <rect key="frame" x="50" y="200" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tfTodoName:" destination="Usr-Ym-vb2" eventType="editingDidEnd" id="JUA-Gs-tOh"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrL-XZ-bGo">
+                                <rect key="frame" x="174" y="297" width="66" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveClick:" destination="Usr-Ym-vb2" eventType="touchUpInside" id="3t6-2R-J3N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cIr-eF-3vX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MrL-XZ-bGo" firstAttribute="centerX" secondItem="qAW-EV-L0F" secondAttribute="centerX" id="DNu-ny-wbV"/>
+                            <constraint firstItem="qAW-EV-L0F" firstAttribute="top" secondItem="cIr-eF-3vX" secondAttribute="top" constant="108" id="Gft-ZC-a8e"/>
                             <constraint firstItem="jKt-eL-kGw" firstAttribute="centerX" secondItem="r4V-np-IBA" secondAttribute="centerX" id="TKm-pa-S6l"/>
+                            <constraint firstItem="qAW-EV-L0F" firstAttribute="leading" secondItem="cIr-eF-3vX" secondAttribute="leading" constant="50" id="XNf-mI-Ldl"/>
                             <constraint firstItem="jKt-eL-kGw" firstAttribute="centerY" secondItem="r4V-np-IBA" secondAttribute="centerY" id="e8K-et-kMB"/>
+                            <constraint firstItem="cIr-eF-3vX" firstAttribute="trailing" secondItem="qAW-EV-L0F" secondAttribute="trailing" constant="50" id="oUg-1K-b4I"/>
+                            <constraint firstItem="MrL-XZ-bGo" firstAttribute="top" secondItem="qAW-EV-L0F" secondAttribute="bottom" constant="63" id="vry-eZ-KEz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Nty-NA-VEP"/>
+                    <navigationItem key="navigationItem" title="To Do Save" id="Nty-NA-VEP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEQ-MP-FKC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Usr-Ym-vb2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1834.3511450381679" y="22.535211267605636"/>
         </scene>
-        <!--View Controller-->
+        <!--To Do Details-->
         <scene sceneID="dlC-5X-WiR">
             <objects>
-                <viewController id="oXi-Lf-HzX" sceneMemberID="viewController">
+                <viewController id="oXi-Lf-HzX" customClass="DetailsViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a0y-q2-75t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,17 +156,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Do Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zLu-iu-Xat">
+                                <rect key="frame" x="30" y="122" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfa-qL-PcD">
+                                <rect key="frame" x="171" y="225" width="72" height="28"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="UPDATE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="updateClick:" destination="FBG-6d-Uvm" eventType="touchUpInside" id="cqe-aC-kFe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g9M-z2-vcX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zLu-iu-Xat" firstAttribute="top" secondItem="g9M-z2-vcX" secondAttribute="top" constant="30" id="13b-dc-XvM"/>
                             <constraint firstItem="KJg-hH-Xgn" firstAttribute="centerY" secondItem="a0y-q2-75t" secondAttribute="centerY" id="8aE-x7-cvb"/>
+                            <constraint firstItem="g9M-z2-vcX" firstAttribute="trailing" secondItem="zLu-iu-Xat" secondAttribute="trailing" constant="30" id="AwQ-Ke-z3d"/>
+                            <constraint firstItem="Xfa-qL-PcD" firstAttribute="centerX" secondItem="a0y-q2-75t" secondAttribute="centerX" id="U3j-Ga-D53"/>
+                            <constraint firstItem="Xfa-qL-PcD" firstAttribute="top" secondItem="zLu-iu-Xat" secondAttribute="bottom" constant="69" id="bdk-83-o7D"/>
                             <constraint firstItem="KJg-hH-Xgn" firstAttribute="centerX" secondItem="a0y-q2-75t" secondAttribute="centerX" id="lv5-bt-LmA"/>
+                            <constraint firstItem="zLu-iu-Xat" firstAttribute="leading" secondItem="g9M-z2-vcX" secondAttribute="leading" constant="30" id="qPv-Gc-1ud"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kKp-zO-qYN"/>
+                    <navigationItem key="navigationItem" title="To Do Details" id="kKp-zO-qYN"/>
+                    <connections>
+                        <outlet property="tfTodoName" destination="zLu-iu-Xat" id="HwN-P6-lAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JS-E3-xsf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="FBG-6d-Uvm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="983" y="816"/>
         </scene>
@@ -148,6 +202,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LSL-bL-XoC">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

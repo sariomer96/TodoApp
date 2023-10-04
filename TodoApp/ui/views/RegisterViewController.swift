@@ -9,13 +9,16 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBAction func tfTodoName(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+ 
     }
     
 
   
-
+    @IBAction func saveClick(_ sender: Any) {
+    }
+    
 }

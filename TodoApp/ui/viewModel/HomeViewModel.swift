@@ -17,7 +17,7 @@ class HomeViewModel {
         toDorepo.dbCopy()
         todoList = toDorepo.toDoList
     }
-    func ara(searchWord:String) {
+    func search(searchWord:String) {
   
         toDorepo.search(searchWord: searchWord)
     }

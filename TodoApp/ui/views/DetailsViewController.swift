@@ -15,12 +15,19 @@ class DetailsViewController: UIViewController {
     var viewModel = DetailViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let todo = todo {
+            tfTodoName.text = todo.name
+        }
  
     }
     
-
-    @IBAction func updateClick(_ sender: Any) {
+    @IBAction func updateClicked(_ sender: Any) {
+        if let name = tfTodoName.text , let to = todo {
+            viewModel.update(id: to.id!, name: name)
+        }
     }
+  
     
 
 }

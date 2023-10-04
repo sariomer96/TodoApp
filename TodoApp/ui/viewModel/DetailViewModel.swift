@@ -11,7 +11,7 @@ class DetailViewModel {
     
     var toDorepo = ToDoDaoRepository()
     
-    func guncelle(id:Int,name:String){
+    func update(id:Int,name:String){
       
         toDorepo.update(id: id, name: name)
     }

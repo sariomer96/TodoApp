@@ -17,7 +17,7 @@ class Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("home")
         searchBar.delegate = self
         todoTableView.delegate = self
         todoTableView.dataSource = self
@@ -30,7 +30,7 @@ class Home: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("anasayfaya donuldu")
+       
         viewModel.loadToDo()
         
     }

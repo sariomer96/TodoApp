@@ -11,7 +11,7 @@ class RegisterViewModel {
     
     
     var repo = ToDoDaoRepository()
-    func kaydet(name:String){
+    func save(name:String){
 
         repo.save(name: name)
    

@@ -9,16 +9,23 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    @IBAction func tfTodoName(_ sender: Any) {
-    }
+    @IBOutlet weak var tfTodoText: UITextField!
+    var viewModel = RegisterViewModel()
     override func viewDidLoad() {
+        print("viee")
         super.viewDidLoad()
  
     }
     
 
-  
-    @IBAction func saveClick(_ sender: Any) {
+    @IBAction func saveClicked(_ sender: Any) {
+        print("clicfffffjed")
+        if let name = tfTodoText.text {
+            viewModel.save(name: name)
+            print("clicjed")
+        }
     }
+    
+  
     
 }
